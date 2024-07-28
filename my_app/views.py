@@ -14,6 +14,8 @@ def home(request):
 
       newlogin = login(username=username1, password=password1)
       newlogin.save()
+      mydata=login.objects.all()
+      return render(request,"home.html", {})
 
       
    return render(request,"home.html", {})
